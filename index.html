@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmation dialog challenge</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <button id="showDialog" class="button info">Click me</button>
+
+  <div class="modal">
+    <div class="dialog">
+      <div class="dialog-content">
+        Are you sure you want to continue?
+        <div class="dialog-actions">
+          <div class="button success">Yes</div>
+          <div class="button">Cancel</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("showDialog").addEventListener("click", (_) => {
+      console.log("Test");
+    });
+  </script>
+</body>
+
+</html>
