@@ -13,22 +13,23 @@
 
   <button id="showDialog" class="button info">Click me</button>
 
-  <div class="modal">
-    <div class="dialog">
-      <div class="dialog-content">
-        Are you sure you want to continue?
-        <div class="dialog-actions">
-          <div class="button success">Yes</div>
-          <div class="button">Cancel</div>
-        </div>
 
-      </div>
-    </div>
-  </div>
-
+  <script src="./dialog.js" ></script>
   <script>
     document.getElementById("showDialog").addEventListener("click", (_) => {
-      console.log("Test");
+      new Dialog({
+        message: "Are you sure you want to continue?",
+        actions: [
+          new DialogAction({
+            text: "Yes",
+            style: "success",
+          }),
+          new DialogAction({
+            text: "Cancel",
+            style: "critical",
+          }),
+        ],
+      }).show();
     });
   </script>
 </body>
