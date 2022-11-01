@@ -16,20 +16,22 @@
 
   <script src="./dialog.js" ></script>
   <script>
-    document.getElementById("showDialog").addEventListener("click", (_) => {
-      new Dialog({
-        message: "Are you sure you want to continue?",
-        actions: [
-          new DialogAction({
-            text: "Yes",
-            style: "success",
-          }),
-          new DialogAction({
-            text: "Cancel",
-            style: "critical",
-          }),
-        ],
-      }).show();
+    document.getElementById("showDialog").addEventListener("click", async (_) => {
+      const result = await Dialog.confirm();
+      console.log(result);
+      // new Dialog({
+      //   message: "Are you sure you want to continue?",
+      //   actions: [
+      //     new DialogAction({
+      //       text: "Yes",
+      //       style: "success",
+      //     }),
+      //     new DialogAction({
+      //       text: "Cancel",
+      //       style: "critical",
+      //     }),
+      //   ],
+      // }).show();
     });
   </script>
 </body>
